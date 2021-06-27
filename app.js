@@ -7,13 +7,14 @@ var logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
+const { dbHost, dbCluster, dbName } = require("./config");
 
 const cors = require("cors");
 
 // import mongoose
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://fajriputrap:mikrotik12345@cluster0.emeay.mongodb.net/db_liburanyuk?retryWrites=true&w=majority",
+  `mongodb+srv://${dbHost}@${dbCluster}/${dbName}?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

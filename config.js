@@ -6,6 +6,9 @@ dotenv.config();
 module.exports = {
   rootPath: path.resolve(__dirname, ".."),
   clientURL: process.env.CLIENT_URL,
+  dbHost: process.env.DB_HOST,
+  dbCluster: process.env.DB_CLUSTER,
+  dbName: process.env.DB_NAME,
   activationTokenSecret: process.env.ACTIVATION_TOKEN_SECRET,
   accessTokenSecret: process.env.ACCESS_TOKEN_SECRET,
   refreshTokenSecret: process.env.REFRESH_TOKEN_SECRET,
